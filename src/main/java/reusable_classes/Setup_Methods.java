@@ -3,9 +3,7 @@ package reusable_classes;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
@@ -18,7 +16,7 @@ import java.lang.reflect.Method;
 import java.util.concurrent.TimeUnit;
 
 public class Setup_Methods extends All_Reusable_Methods {
-    public static WebDriver driver = null;
+    public static WebDriver driver= null;
     public static ExtentReports report = null;
     public static ExtentTest logger = null;
 
@@ -39,7 +37,7 @@ public class Setup_Methods extends All_Reusable_Methods {
     public static void before(Method methodName) {
         logger = report.startTest(methodName.getName() + "--");
         logger.log(LogStatus.INFO, "Automation Test Scenario Started....");
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }//end of the before method
 
     @AfterMethod

@@ -4,8 +4,6 @@ import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -67,6 +65,23 @@ public static void click(WebDriver driver, WebElement locator, int indexNumber, 
         getScreenshot(driver, loggers, elementName);
     }
 }//end of click method
+
+    //check if an element is present using explicit wait
+    public static boolean elementPresent(WebDriver driver, WebElement locator, int indexNumber, ExtentTest loggers, String elementName) throws IOException, InterruptedException {
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        boolean b = false;
+        try {
+            System.out.println("Checking if " + elementName+ " is present");
+            loggers.log(LogStatus.INFO, "Checking the presence of element " + elementName);
+           b = wait.until(ExpectedConditions.visibilityOfAllElements(locator)).get(indexNumber).isDisplayed();
+        } catch (Exception err) {
+            System.out.println("The element is not displayed " + elementName + " --" + err);
+            loggers.log(LogStatus.FAIL, "The element is not displayed " + elementName + " --" + err);
+            getScreenshot(driver, loggers, elementName);
+        }
+
+        return b;
+    }
 
     //entering info on element using explicit wait
     public static void userInput(WebDriver driver, WebElement locator, int indexNumber, String userValue, ExtentTest loggers, String elementName) throws IOException, InterruptedException {

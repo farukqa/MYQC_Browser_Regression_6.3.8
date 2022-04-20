@@ -12,12 +12,12 @@ import java.io.IOException;
 
 import reusable_classes.Setup_Methods;
 
-
-public class MYQC_Pre_Login_Page extends Setup_Methods {
+//extends Setup method
+public class MYQC_1_Pre_Login_Page extends Setup_Methods {
 
     ExtentTest logger;
 
-    public MYQC_Pre_Login_Page(WebDriver driver) {
+    public MYQC_1_Pre_Login_Page(WebDriver driver) {
         super();
         PageFactory.initElements(driver, this);
         this.logger = super.logger;
@@ -26,9 +26,9 @@ public class MYQC_Pre_Login_Page extends Setup_Methods {
     @FindBy(how = How.XPATH, using = "//*[@id=\"logoutMyQCLink\"]")
     public static WebElement preLoginButton;
 
-    public MYQC_Pre_Login_Page clickOnMYQCLink() throws IOException, InterruptedException {
+    public MYQC_1_Pre_Login_Page clickOnMYQCLink() throws IOException, InterruptedException {
         All_Reusable_Methods.click(driver, preLoginButton, 0, logger, "Pre-MYQC button");
-        return new MYQC_Pre_Login_Page(driver);
+        return new MYQC_1_Pre_Login_Page(driver);
     }
 
 

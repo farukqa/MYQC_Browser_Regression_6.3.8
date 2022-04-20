@@ -1,7 +1,6 @@
 package com.mmhayes.myqc_pages;
 
-import org.apache.xmlbeans.impl.xb.xsdschema.All;
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -23,8 +22,8 @@ public class MYQC_Online_Ordering_Page extends Setup_Methods {
     // Store Selection button
     @FindBy(how = How.XPATH, using = "//*[@id=\"stores-available\"]/li[1]/div[1]/h2")
     public static WebElement cafe;
-    // home button
-    @FindBy(how=How.XPATH,using="//*[@id=\\\"order-header\\\"]/a[1]")
+
+    @FindBy(how=How.XPATH,using="//*[@id=\"order-header\"]/a[1]")
             public static WebElement home;
 
     //clicking the Cafeteria button
