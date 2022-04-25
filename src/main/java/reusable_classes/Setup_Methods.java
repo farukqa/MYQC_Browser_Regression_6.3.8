@@ -16,7 +16,7 @@ import java.lang.reflect.Method;
 import java.util.concurrent.TimeUnit;
 
 public class Setup_Methods extends All_Reusable_Methods {
-    public static WebDriver driver= null;
+    public static WebDriver driver = null;
     public static ExtentReports report = null;
     public static ExtentTest logger = null;
 

@@ -9,6 +9,7 @@ import reusable_classes.Setup_Methods;
 
 import java.io.IOException;
 
+import static reusable_classes.All_Reusable_Methods.prln;
 import static reusable_classes.MYQC_Base_Class.home_page;
 import static reusable_classes.MYQC_Base_Class.online_ordering_page;
 
@@ -22,25 +23,13 @@ public class TC003_Online_Ordering_Page_Test extends Setup_Methods {
         home_page().clickOnOnlineOrdering();
 
         //checking if the Cafeteria option is present
-        Assert.assertEquals(online_ordering_page().cafeButton(),"Cafeteria");
+        Assert.assertEquals(online_ordering_page().cafeButton(), "Cafeteria");
         prln("Tested Online Ordering Page Loading\n=======");
         //returning to the home page
         Thread.sleep(2000);
         online_ordering_page().clickHome();
         // checking if home page has loaded
-        Assert.assertEquals(home_page().getTextOnlineOrderingButton(),"Online Ordering");
-
-
-
-
-
-
-
-
-
-
-
-
+        Assert.assertEquals(home_page().getTextOnlineOrderingButton(), "Online Ordering");
 
 
     }

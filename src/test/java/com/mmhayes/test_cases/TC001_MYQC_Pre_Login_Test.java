@@ -19,10 +19,10 @@ public class TC001_MYQC_Pre_Login_Test extends Setup_Methods {
     public static void pre_Login_Test() throws IOException, InterruptedException {
         driver.get("https://mmhcustfour.mmhcloud.com/myqc/#main");
         pre_login_page().clickOnMYQCLink();
-       String actual = login_page().getPageTitle();
-       String expected = "Login";
+        String actual = login_page().getPageTitle();
+        String expected = "Login";
         Assert.assertEquals(actual, expected);
-        Assert.assertEquals(login_page().presenseOfForgotPassLink(),true);
+        Assert.assertEquals(login_page().presenseOfForgotPassLink(), true);
 
     }
 }

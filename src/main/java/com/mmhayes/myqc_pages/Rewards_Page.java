@@ -29,7 +29,7 @@ public class Rewards_Page extends Setup_Methods {
     public static WebElement pointBalance;
 
     public String pointBalanceCheck() throws IOException, InterruptedException {
-       return  All_Reusable_Methods.captureTextByIndex(driver, pointBalance, 0, logger, "Point Balance");
+        return All_Reusable_Methods.captureTextByIndex(driver, pointBalance, 0, logger, "Point Balance");
     }
 
 

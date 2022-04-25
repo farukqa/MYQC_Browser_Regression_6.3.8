@@ -3,7 +3,9 @@ package com.mmhayes.test_cases;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import reusable_classes.Setup_Methods;
+
 import java.io.IOException;
+
 import static reusable_classes.MYQC_Base_Class.*;
 
 public class TC005_PointDonation_Test extends Setup_Methods {
@@ -13,7 +15,7 @@ public class TC005_PointDonation_Test extends Setup_Methods {
         home_page().clickOnRewardsPage();
         int availablePoints = Integer.parseInt((reward_page().pointBalanceCheck()));
         //checking if the point balance is zero
-        if (availablePoints == 1) {
+        if (availablePoints == 0) {
             //returning to the home page
             reward_page().clickOnHome();
             // checking if home page has loaded
@@ -31,7 +33,6 @@ public class TC005_PointDonation_Test extends Setup_Methods {
             point_donation_page().clickOnSuccessMsg();
             //checking point balance after making a donation
             int afterDonationPoints = Integer.parseInt((reward_page().pointBalanceCheck()));
-
             Assert.assertEquals(afterDonationPoints, 0);
             //returning to the home page
             reward_page().clickOnHome();

@@ -11,9 +11,9 @@ import reusable_classes.Setup_Methods;
 import java.io.IOException;
 
 public class MYQC_Cafeteria_Page extends Setup_Methods {
-    public MYQC_Cafeteria_Page(WebDriver driver){
+    public MYQC_Cafeteria_Page(WebDriver driver) {
         super();
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver, this);
         logger = super.logger;
     }
 
@@ -25,12 +25,13 @@ public class MYQC_Cafeteria_Page extends Setup_Methods {
 
     //checking the text of the Cafeteria button
     public String quickpicks() throws IOException, InterruptedException {
-        return All_Reusable_Methods.captureTextByIndex(driver,quickpicks,0,logger,"Cafeteria");
+        return All_Reusable_Methods.captureTextByIndex(driver, quickpicks, 0, logger, "Cafeteria");
 
     }
+
     //clicking the backbutton
     public MYQC_Cafeteria_Page backButtonClick() throws IOException, InterruptedException {
-        All_Reusable_Methods.click(driver,backButton,0,logger,"back button");
+        All_Reusable_Methods.click(driver, backButton, 0, logger, "back button");
         return new MYQC_Cafeteria_Page(driver);
     }
 }

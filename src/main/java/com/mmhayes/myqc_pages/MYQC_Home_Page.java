@@ -15,9 +15,9 @@ import static java.lang.Thread.sleep;
 
 public class MYQC_Home_Page extends Setup_Methods {
 
-    public MYQC_Home_Page(WebDriver driver){
+    public MYQC_Home_Page(WebDriver driver) {
         super();
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver, this);
         this.logger = super.logger;
     }
 
@@ -31,22 +31,24 @@ public class MYQC_Home_Page extends Setup_Methods {
     public static WebElement online_Ordering;
 
     // reward button
-    @FindBy(how =How.XPATH,using ="//*[@id=\"nav-rewards\"]")
+    @FindBy(how = How.XPATH, using = "//*[@id=\"nav-rewards\"]")
     public static WebElement reward_Page_Button;
 
     //clicking the Online Ordering button
     public MYQC_Home_Page clickOnOnlineOrdering() throws IOException, InterruptedException {
-        All_Reusable_Methods.click(driver,online_Ordering,0,logger,"Online Ordering");
+        All_Reusable_Methods.click(driver, online_Ordering, 0, logger, "Online Ordering");
         return new MYQC_Home_Page(driver);
     }
-    //capturing text of the Online Ordering Button
-   public String getTextOnlineOrderingButton() throws IOException, InterruptedException {
-      return All_Reusable_Methods.captureTextByIndex(driver,online_Ordering,0,logger,"Online Ordering Button");
 
-  }
+    //capturing text of the Online Ordering Button
+    public String getTextOnlineOrderingButton() throws IOException, InterruptedException {
+        return All_Reusable_Methods.captureTextByIndex(driver, online_Ordering, 0, logger, "Online Ordering Button");
+
+    }
+
     //clicking the Reward page button
     public MYQC_Home_Page clickOnRewardsPage() throws IOException, InterruptedException {
-        All_Reusable_Methods.click(driver,reward_Page_Button,0,logger,"Reward Page");
+        All_Reusable_Methods.click(driver, reward_Page_Button, 0, logger, "Reward Page");
         return new MYQC_Home_Page(driver);
     }
 

@@ -43,16 +43,17 @@ public class MYQC_Login_Page extends Setup_Methods {
     public static WebElement login;
 
     //this is for forget password link
-    @FindBy(how = How.XPATH, using="//*[@id=\"forgotPasswordLink\"]")
+    @FindBy(how = How.XPATH, using = "//*[@id=\"forgotPasswordLink\"]")
     public static WebElement forgotPass;
 
     // reading the page title
-   public String getPageTitle() throws IOException, InterruptedException {
-       return All_Reusable_Methods.captureTextByIndex(driver,pageTitle,0,logger,"Page Title");
-   }
-   // checking the presence of the Forgot Password link
+    public String getPageTitle() throws IOException, InterruptedException {
+        return All_Reusable_Methods.captureTextByIndex(driver, pageTitle, 0, logger, "Page Title");
+    }
+
+    // checking the presence of the Forgot Password link
     public boolean presenseOfForgotPassLink() throws IOException, InterruptedException {
-      return All_Reusable_Methods.elementPresent(driver,forgotPass,0,logger," Forgot Password");
+        return All_Reusable_Methods.elementPresent(driver, forgotPass, 0, logger, " Forgot Password");
 
     }
 

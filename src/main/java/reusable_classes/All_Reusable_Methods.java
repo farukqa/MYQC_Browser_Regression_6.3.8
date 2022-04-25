@@ -31,49 +31,50 @@ public class All_Reusable_Methods {
         String image = logger.addScreenCapture(path + fileName);
         logger.log(LogStatus.FAIL, "screenshot added below", image);
     }//end of get screenshot method
-/*
-    //method to navigate using webdriver
-    public static WebDriver navigate(WebDriver driver, String url) throws IOException {
-        //log INFO command to navigate
-        //logger.log(LogStatus.INFO, "Navigating to url " + url);
 
-        //define the path of the chrome driver
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\fhasan\\Desktop\\driver\\chromedriver.exe");
-        //quit all open chrome browsers
-        //Runtime.getRuntime().exec("taskkill /im chromedriver.exe /f /t");
-        //setting up the chromeoptions
-        ChromeOptions options = new ChromeOptions();
-        //add the precondition arguments
-        options.addArguments("start-maximized", "incognito");
-        //define the chrome web driver
-        driver = new ChromeDriver(options);
-        //navigate to url
-        driver.navigate().to(url);
-        return driver;
-    }//end of navigate
-*/
+    /*
+        //method to navigate using webdriver
+        public static WebDriver navigate(WebDriver driver, String url) throws IOException {
+            //log INFO command to navigate
+            //logger.log(LogStatus.INFO, "Navigating to url " + url);
+
+            //define the path of the chrome driver
+            System.setProperty("webdriver.chrome.driver","C:\\Users\\fhasan\\Desktop\\driver\\chromedriver.exe");
+            //quit all open chrome browsers
+            //Runtime.getRuntime().exec("taskkill /im chromedriver.exe /f /t");
+            //setting up the chromeoptions
+            ChromeOptions options = new ChromeOptions();
+            //add the precondition arguments
+            options.addArguments("start-maximized", "incognito");
+            //define the chrome web driver
+            driver = new ChromeDriver(options);
+            //navigate to url
+            driver.navigate().to(url);
+            return driver;
+        }//end of navigate
+    */
 //click on element using explicit wait
-public static void click(WebDriver driver, WebElement locator, int indexNumber, ExtentTest loggers, String elementName) throws IOException, InterruptedException {
-    WebDriverWait wait = new WebDriverWait(driver, 10);
-    try {
-        System.out.println("Clicking on element " + elementName);
-        loggers.log(LogStatus.INFO, "Clicking on element " + elementName);
-        wait.until(ExpectedConditions.visibilityOfAllElements(locator)).get(indexNumber).click();
-    } catch (Exception err) {
-        System.out.println("Unable to click on element " + elementName + " --" + err);
-        loggers.log(LogStatus.FAIL, "Unable to click on element " + elementName + " --" + err);
-        getScreenshot(driver, loggers, elementName);
-    }
-}//end of click method
+    public static void click(WebDriver driver, WebElement locator, int indexNumber, ExtentTest loggers, String elementName) throws IOException, InterruptedException {
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        try {
+            System.out.println("Clicking on element " + elementName);
+            loggers.log(LogStatus.INFO, "Clicking on element " + elementName);
+            wait.until(ExpectedConditions.visibilityOfAllElements(locator)).get(indexNumber).click();
+        } catch (Exception err) {
+            System.out.println("Unable to click on element " + elementName + " --" + err);
+            loggers.log(LogStatus.FAIL, "Unable to click on element " + elementName + " --" + err);
+            getScreenshot(driver, loggers, elementName);
+        }
+    }//end of click method
 
     //check if an element is present using explicit wait
     public static boolean elementPresent(WebDriver driver, WebElement locator, int indexNumber, ExtentTest loggers, String elementName) throws IOException, InterruptedException {
         WebDriverWait wait = new WebDriverWait(driver, 10);
         boolean b = false;
         try {
-            System.out.println("Checking if " + elementName+ " is present");
+            System.out.println("Checking if " + elementName + " is present");
             loggers.log(LogStatus.INFO, "Checking the presence of element " + elementName);
-           b = wait.until(ExpectedConditions.visibilityOfAllElements(locator)).get(indexNumber).isDisplayed();
+            b = wait.until(ExpectedConditions.visibilityOfAllElements(locator)).get(indexNumber).isDisplayed();
         } catch (Exception err) {
             System.out.println("The element is not displayed " + elementName + " --" + err);
             loggers.log(LogStatus.FAIL, "The element is not displayed " + elementName + " --" + err);
@@ -131,6 +132,7 @@ public static void click(WebDriver driver, WebElement locator, int indexNumber, 
             getScreenshot(driver, loggers, elementName);
         }
     }//end of Select by text method
+
     public static String getDateTime() {
         SimpleDateFormat sdfDateTime;
         String strDateTime;
@@ -140,7 +142,7 @@ public static void click(WebDriver driver, WebElement locator, int indexNumber, 
         return strDateTime;
     }
 
-    public static String getDateforAll(int days,String formattingType) {
+    public static String getDateforAll(int days, String formattingType) {
         DateFormat dateFormat = null;
         dateFormat.setLenient(true);
         SimpleDateFormat sdfDateTime;
@@ -150,7 +152,8 @@ public static void click(WebDriver driver, WebElement locator, int indexNumber, 
         String date1 = dateFormat.format(calendar.getTime());
         return date1;
     }
-    public static void prln(Object object){
+
+    public static void prln(Object object) {
         System.out.println(object);
 
     }

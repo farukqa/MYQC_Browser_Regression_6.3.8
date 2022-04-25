@@ -13,7 +13,6 @@ import java.io.IOException;
 public class ApachePOI {
 
 
-
     public static void main(String[] args) throws IOException {
 
         //Create an object of the File class to open xlsx file
@@ -36,31 +35,25 @@ public class ApachePOI {
     }
 
 
-
-
-
-
-
-
-
-    public static int minFunction(int n1, int n2){
+    public static int minFunction(int n1, int n2) {
         int min;
-        if (n1>n2){
+        if (n1 > n2) {
             min = n2;
-        }else {
+        } else {
             min = n1;
         }
-        return min;}
+        return min;
+    }
 
-    public static void noReturnMinFunction(int n1, int n2){
+    public static void noReturnMinFunction(int n1, int n2) {
         int min;
-        if (n1>n2){
+        if (n1 > n2) {
             min = n2;
-        }else {
+        } else {
             min = n1;
         }
         System.out.println(min);
-        }
+    }
 
     static int plusMethod(int x, int y) {
         return x + y;
