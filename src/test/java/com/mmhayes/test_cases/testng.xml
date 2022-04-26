@@ -6,6 +6,7 @@
             <class name="com.mmhayes.test_cases.TC001_MYQC_Pre_Login_Test"/>
             <class name="com.mmhayes.test_cases.TC002_Login_Prepaid_Test"/>
             <class name="com.mmhayes.test_cases.TC005_PointDonation_Test"/>
+            <class name="com.mmhayes.test_cases.TC003_Online_Ordering_Page_Test"/>
 
 
         </classes>

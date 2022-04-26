@@ -34,6 +34,7 @@ public class MYQC_Login_Page extends Setup_Methods {
     @FindBy(how = How.ID, using = "loginName")
     public static WebElement userName;
 
+
     //this is for the password field
     @FindBy(how = How.ID, using = "loginPassword")
     public static WebElement password;

@@ -42,5 +42,10 @@ public class Rewards_Page extends Setup_Methods {
         All_Reusable_Methods.click(driver, homePage, 0, logger, "Home Button");
         return new Rewards_Page(driver);
     }
+
+    public Boolean presenseofDonationButton() throws IOException, InterruptedException {
+       return All_Reusable_Methods.elementPresent(driver,donateButton,0,logger,"Donation");
+        
+    }
 }
 

@@ -16,6 +16,7 @@ public class TC005_PointDonation_Test extends Setup_Methods {
         int availablePoints = Integer.parseInt((reward_page().pointBalanceCheck()));
         //checking if the point balance is zero
         if (availablePoints == 0) {
+            Assert.assertFalse(reward_page().presenseofDonationButton());
             //returning to the home page
             reward_page().clickOnHome();
             // checking if home page has loaded
@@ -36,6 +37,7 @@ public class TC005_PointDonation_Test extends Setup_Methods {
             Assert.assertEquals(afterDonationPoints, 0);
             //returning to the home page
             reward_page().clickOnHome();
+
             // checking if home page has loaded
             Assert.assertEquals(home_page().getTextOnlineOrderingButton(), "Online Ordering");
         }
