@@ -11,11 +11,11 @@ import reusable_classes.Setup_Methods;
 
 import java.io.IOException;
 
-public class Point_Donation_Page extends Setup_Methods {
+public class MYQC_5_1_Point_Donation_Page extends Setup_Methods {
 
     ExtentTest logger;
 
-    public Point_Donation_Page(WebDriver driver) {
+    public MYQC_5_1_Point_Donation_Page(WebDriver driver) {
         super();
         PageFactory.initElements(driver, this);
         this.logger = super.logger;
@@ -47,34 +47,34 @@ public class Point_Donation_Page extends Setup_Methods {
     public static WebElement successMsg;
 
 
-    public Point_Donation_Page clickOnDropDown() throws IOException, InterruptedException {
+    public MYQC_5_1_Point_Donation_Page clickOnDropDown() throws IOException, InterruptedException {
         All_Reusable_Methods.click(driver, dropdownButton, 0, logger, "Charity Dropdown");
-        return new Point_Donation_Page(driver);
+        return new MYQC_5_1_Point_Donation_Page(driver);
     }
 
-    public Point_Donation_Page charitySelection() throws IOException, InterruptedException {
+    public MYQC_5_1_Point_Donation_Page charitySelection() throws IOException, InterruptedException {
         All_Reusable_Methods.click(driver, charitySelection, 0, logger, "First Charity");
-        return new Point_Donation_Page(driver);
+        return new MYQC_5_1_Point_Donation_Page(driver);
     }
 
-    public Point_Donation_Page clickOnSubmission() throws IOException, InterruptedException {
+    public MYQC_5_1_Point_Donation_Page clickOnSubmission() throws IOException, InterruptedException {
         All_Reusable_Methods.click(driver, donationSubmissionButton, 0, logger, "Donation Submission Button");
-        return new Point_Donation_Page(driver);
+        return new MYQC_5_1_Point_Donation_Page(driver);
     }
 
-    public Point_Donation_Page closeDonation() throws IOException, InterruptedException {
+    public MYQC_5_1_Point_Donation_Page closeDonation() throws IOException, InterruptedException {
         All_Reusable_Methods.click(driver, donationCloseButton, 0, logger, "Close Donation Page");
-        return new Point_Donation_Page(driver);
+        return new MYQC_5_1_Point_Donation_Page(driver);
     }
 
-    public Point_Donation_Page clickOnDonationConfirmation() throws IOException, InterruptedException {
+    public MYQC_5_1_Point_Donation_Page clickOnDonationConfirmation() throws IOException, InterruptedException {
         All_Reusable_Methods.click(driver, donationConfirmation, 0, logger, "Donation Confirmation");
-        return new Point_Donation_Page(driver);
+        return new MYQC_5_1_Point_Donation_Page(driver);
     }
 
-    public Point_Donation_Page clickOnSuccessMsg() throws IOException, InterruptedException {
+    public MYQC_5_1_Point_Donation_Page clickOnSuccessMsg() throws IOException, InterruptedException {
         All_Reusable_Methods.click(driver, successMsg, 0, logger, "Success Msg Confirmation");
-        return new Point_Donation_Page(driver);
+        return new MYQC_5_1_Point_Donation_Page(driver);
     }
 
 

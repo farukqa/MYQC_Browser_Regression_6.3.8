@@ -67,7 +67,7 @@ public class All_Reusable_Methods {
         }
     }//end of click method
 
-    //check if an element is present using explicit wait
+    //check if an element is not present using explicit wait
     public static boolean elementPresent(WebDriver driver, WebElement locator, int indexNumber, ExtentTest loggers, String elementName) throws IOException, InterruptedException {
         WebDriverWait wait = new WebDriverWait(driver, 10);
         boolean b = false;
@@ -76,9 +76,9 @@ public class All_Reusable_Methods {
             loggers.log(LogStatus.INFO, "Checking the presence of element " + elementName);
             b = wait.until(ExpectedConditions.visibilityOfAllElements(locator)).get(indexNumber).isDisplayed();
         } catch (Exception err) {
-            System.out.println("The element is not displayed " + elementName + " --" + err);
-            loggers.log(LogStatus.FAIL, "The element is not displayed " + elementName + " --" + err);
-            getScreenshot(driver, loggers, elementName);
+            System.out.println("The " + elementName + " is not present --" + err);
+            loggers.log(LogStatus.PASS, "The element is not displayed as expected " + elementName + " --" + err);
+
         }
 
         return b;

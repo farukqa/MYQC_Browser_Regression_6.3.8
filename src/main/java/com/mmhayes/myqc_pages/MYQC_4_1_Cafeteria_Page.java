@@ -10,8 +10,8 @@ import reusable_classes.Setup_Methods;
 
 import java.io.IOException;
 
-public class MYQC_Cafeteria_Page extends Setup_Methods {
-    public MYQC_Cafeteria_Page(WebDriver driver) {
+public class MYQC_4_1_Cafeteria_Page extends Setup_Methods {
+    public MYQC_4_1_Cafeteria_Page(WebDriver driver) {
         super();
         PageFactory.initElements(driver, this);
         logger = super.logger;
@@ -30,9 +30,9 @@ public class MYQC_Cafeteria_Page extends Setup_Methods {
     }
 
     //clicking the backbutton
-    public MYQC_Cafeteria_Page backButtonClick() throws IOException, InterruptedException {
+    public MYQC_4_1_Cafeteria_Page backButtonClick() throws IOException, InterruptedException {
         All_Reusable_Methods.click(driver, backButton, 0, logger, "back button");
-        return new MYQC_Cafeteria_Page(driver);
+        return new MYQC_4_1_Cafeteria_Page(driver);
     }
 }
 

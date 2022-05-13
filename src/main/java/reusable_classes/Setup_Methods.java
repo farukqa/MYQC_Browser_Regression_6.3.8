@@ -3,6 +3,7 @@ package reusable_classes;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -25,7 +26,11 @@ public class Setup_Methods extends All_Reusable_Methods {
     public static void openBrowser() throws IOException {
         //path to your report
         report = new ExtentReports("C:\\Users\\fhasan\\eclipse-workspace\\MYQC_Browser_Regression\\src\\test\\Reports\\" + getDateTime() + ".html", true);
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\fhasan\\Desktop\\driver\\chromedriver.exe");
+        //  System.setProperty("webdriver.chrome.driver", "C:\\Users\\fhasan\\Desktop\\driver\\chromedriver.exe");
+        //using the WebDriverManager instead of the setting property file
+        WebDriverManager.chromedriver().setup();
+        //we can also set a specific version as well
+        //  WebDriverManager.chromedriver().driverVersion("85.0.4183.38").setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("start-maximized", "incognito");
         driver = new ChromeDriver(options);

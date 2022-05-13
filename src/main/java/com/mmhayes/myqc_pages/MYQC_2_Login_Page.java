@@ -13,15 +13,15 @@ import java.io.IOException;
 import reusable_classes.Setup_Methods;
 
 //extends Setup_Methods
-public class MYQC_Login_Page extends Setup_Methods {
+public class MYQC_2_Login_Page extends Setup_Methods {
 
     ExtentTest logger;
 
 
-    public MYQC_Login_Page(WebDriver driver) {
+    public MYQC_2_Login_Page(WebDriver driver) {
         super();
         PageFactory.initElements(driver, this);
-        this.logger = super.logger;
+        this.logger = Setup_Methods.logger;
     }
 
     // this is for page title
@@ -59,33 +59,33 @@ public class MYQC_Login_Page extends Setup_Methods {
     }
 
     // clicking the username field
-    public MYQC_Login_Page clickOnUsername() throws IOException, InterruptedException {
+    public MYQC_2_Login_Page clickOnUsername() throws IOException, InterruptedException {
         All_Reusable_Methods.click(driver, userName, 0, logger, "username");
-        return new MYQC_Login_Page(driver);
+        return new MYQC_2_Login_Page(driver);
     }
 
     //send username
-    public MYQC_Login_Page sendUsername(String username) throws IOException, InterruptedException {
+    public MYQC_2_Login_Page sendUsername(String username) throws IOException, InterruptedException {
         All_Reusable_Methods.userInput(driver, userName, 0, username, logger, "username");
-        return new MYQC_Login_Page(driver);
+        return new MYQC_2_Login_Page(driver);
     }
 
     // clicking the password field
-    public MYQC_Login_Page clickOnpassword() throws IOException, InterruptedException {
+    public MYQC_2_Login_Page clickOnpassword() throws IOException, InterruptedException {
         All_Reusable_Methods.click(driver, userName, 0, logger, "password");
-        return new MYQC_Login_Page(driver);
+        return new MYQC_2_Login_Page(driver);
     }
 
     // send password
-    public MYQC_Login_Page sendPassword(String pass) throws IOException, InterruptedException {
+    public MYQC_2_Login_Page sendPassword(String pass) throws IOException, InterruptedException {
         All_Reusable_Methods.userInput(driver, password, 0, pass, logger, "password");
-        return new MYQC_Login_Page(driver);
+        return new MYQC_2_Login_Page(driver);
     }
 
     // clicking the login button
-    public MYQC_Login_Page clickOnLogin() throws IOException, InterruptedException {
+    public MYQC_2_Login_Page clickOnLogin() throws IOException, InterruptedException {
         All_Reusable_Methods.click(driver, login, 0, logger, "login button");
-        return new MYQC_Login_Page(driver);
+        return new MYQC_2_Login_Page(driver);
     }
 
 

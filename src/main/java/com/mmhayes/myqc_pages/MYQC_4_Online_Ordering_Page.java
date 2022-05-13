@@ -11,9 +11,9 @@ import reusable_classes.Setup_Methods;
 
 import java.io.IOException;
 
-public class MYQC_Online_Ordering_Page extends Setup_Methods {
+public class MYQC_4_Online_Ordering_Page extends Setup_Methods {
 
-    public MYQC_Online_Ordering_Page(WebDriver driver) {
+    public MYQC_4_Online_Ordering_Page(WebDriver driver) {
         super();
         PageFactory.initElements(driver, this);
         this.logger = super.logger;
@@ -27,9 +27,9 @@ public class MYQC_Online_Ordering_Page extends Setup_Methods {
     public static WebElement home;
 
     //clicking the Cafeteria button
-    public MYQC_Online_Ordering_Page clickOnCafe() throws IOException, InterruptedException {
+    public MYQC_4_Online_Ordering_Page clickOnCafe() throws IOException, InterruptedException {
         All_Reusable_Methods.click(driver, cafe, 0, logger, "Cafeteria");
-        return new MYQC_Online_Ordering_Page(driver);
+        return new MYQC_4_Online_Ordering_Page(driver);
     }
 
     //checking the text of the Cafeteria button
@@ -39,9 +39,9 @@ public class MYQC_Online_Ordering_Page extends Setup_Methods {
     }
 
     //clicking the home button
-    public MYQC_Online_Ordering_Page clickHome() throws IOException, InterruptedException {
+    public MYQC_4_Online_Ordering_Page clickHome() throws IOException, InterruptedException {
         All_Reusable_Methods.click(driver, home, 0, logger, "home button");
-        return new MYQC_Online_Ordering_Page(driver);
+        return new MYQC_4_Online_Ordering_Page(driver);
     }
 
 

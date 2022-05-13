@@ -22,7 +22,7 @@ public class TC001_MYQC_Pre_Login_Test extends Setup_Methods {
         String actual = login_page().getPageTitle();
         String expected = "Login";
         Assert.assertEquals(actual, expected);
-        Assert.assertEquals(login_page().presenseOfForgotPassLink(), true);
+        Assert.assertTrue(login_page().presenseOfForgotPassLink());
 
     }
 }

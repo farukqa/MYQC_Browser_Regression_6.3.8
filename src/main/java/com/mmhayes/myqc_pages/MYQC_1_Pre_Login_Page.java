@@ -20,15 +20,15 @@ public class MYQC_1_Pre_Login_Page extends Setup_Methods {
     public MYQC_1_Pre_Login_Page(WebDriver driver) {
         super();
         PageFactory.initElements(driver, this);
-        this.logger = super.logger;
+        this.logger = Setup_Methods.logger;
     }
 
     @FindBy(how = How.XPATH, using = "//*[@id=\"logoutMyQCLink\"]")
     public static WebElement preLoginButton;
 
-    public MYQC_1_Pre_Login_Page clickOnMYQCLink() throws IOException, InterruptedException {
+    public void clickOnMYQCLink() throws IOException, InterruptedException {
         All_Reusable_Methods.click(driver, preLoginButton, 0, logger, "Pre-MYQC button");
-        return new MYQC_1_Pre_Login_Page(driver);
+        new MYQC_1_Pre_Login_Page(driver);
     }
 
 

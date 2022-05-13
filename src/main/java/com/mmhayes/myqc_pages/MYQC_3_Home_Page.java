@@ -11,11 +11,10 @@ import reusable_classes.Setup_Methods;
 
 import java.io.IOException;
 
-import static java.lang.Thread.sleep;
 
-public class MYQC_Home_Page extends Setup_Methods {
+public class MYQC_3_Home_Page extends Setup_Methods {
 
-    public MYQC_Home_Page(WebDriver driver) {
+    public MYQC_3_Home_Page(WebDriver driver) {
         super();
         PageFactory.initElements(driver, this);
         this.logger = super.logger;
@@ -33,11 +32,14 @@ public class MYQC_Home_Page extends Setup_Methods {
     // reward button
     @FindBy(how = How.XPATH, using = "//*[@id=\"nav-rewards\"]")
     public static WebElement reward_Page_Button;
+    // current balance button
+    @FindBy(how=How.XPATH,using = "//*[@id=\"nav-balances\"]")
+    public static WebElement currentPageButton;
 
     //clicking the Online Ordering button
-    public MYQC_Home_Page clickOnOnlineOrdering() throws IOException, InterruptedException {
+    public MYQC_3_Home_Page clickOnOnlineOrdering() throws IOException, InterruptedException {
         All_Reusable_Methods.click(driver, online_Ordering, 0, logger, "Online Ordering");
-        return new MYQC_Home_Page(driver);
+        return new MYQC_3_Home_Page(driver);
     }
 
     //capturing text of the Online Ordering Button
@@ -47,9 +49,14 @@ public class MYQC_Home_Page extends Setup_Methods {
     }
 
     //clicking the Reward page button
-    public MYQC_Home_Page clickOnRewardsPage() throws IOException, InterruptedException {
+    public MYQC_3_Home_Page clickOnRewardsPage() throws IOException, InterruptedException {
         All_Reusable_Methods.click(driver, reward_Page_Button, 0, logger, "Reward Page");
-        return new MYQC_Home_Page(driver);
+        return new MYQC_3_Home_Page(driver);
+    }
+    //clicking the Current Balance page button
+    public MYQC_3_Home_Page clickOnCurrentBalancePage() throws IOException,InterruptedException{
+        All_Reusable_Methods.click(driver,currentPageButton,0,logger,"Current Balance Page");
+        return  new MYQC_3_Home_Page(driver);
     }
 
 

@@ -1,13 +1,9 @@
 package com.mmhayes.test_cases;
 
-import com.mmhayes.myqc_pages.MYQC_Home_Page;
-import com.mmhayes.myqc_pages.MYQC_Online_Ordering_Page;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import reusable_classes.Setup_Methods;
@@ -24,13 +20,13 @@ import static reusable_classes.MYQC_Base_Class.login_page;
 public class TC002_Login_Prepaid_Test extends Setup_Methods {
 
 
-    @Test
+    @Test(priority = 1)
     // TC002- Testing Logging in to MYQC
     public static void login_Test() throws IOException, InterruptedException {
 
         //Create an object of the File class to open xlsx file
         File file = new File("C:\\Users\\fhasan\\Desktop\\idPass.xlsx");
-        // Create an object of FileInputStream class to read excel file
+        // Create an object of FileInputStream class to read Excel file
         FileInputStream inputStream = new FileInputStream(file);
         //Create a workbook instance that refers to .xlsx file
         XSSFWorkbook wb = new XSSFWorkbook(inputStream);
@@ -52,7 +48,7 @@ public class TC002_Login_Prepaid_Test extends Setup_Methods {
             String expected = "Online Ordering";
             String actual = home_page().getTextOnlineOrderingButton();
             Assert.assertEquals(actual, expected);
-            prln("Homepage loading test complete\n=======");
+            prln("Homepage load is complete to start testing\n=======");
 
             //https://www.toolsqa.com/selenium-webdriver/excel-in-selenium/
         }
