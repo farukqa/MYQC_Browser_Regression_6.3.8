@@ -8,8 +8,7 @@
             </class>
             <class name="com.mmhayes.test_cases.TC002_Login_Prepaid_Test">
             </class>
-            <class name="com.mmhayes.test_cases.TC005_PointDonation_Test">
-            </class>
+
             <class name="com.mmhayes.test_cases.TC007_DollarDonationButtonTest">
             </class>
 
