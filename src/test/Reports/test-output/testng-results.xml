@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="4" passed="4">
+    <reporter-output>
+    </reporter-output>
+    <suite name="All Test Suite" duration-ms="22445" started-at="2022-04-22T14:30:46Z"
+           finished-at="2022-04-22T14:31:09Z">
+        <groups>
+        </groups>
+        <test name="C:/Users/fhasan/eclipse-workspace/MYQC_Browser_Regression" duration-ms="22445"
+              started-at="2022-04-22T14:30:46Z" finished-at="2022-04-22T14:31:09Z">
+            <class name="com.mmhayes.test_cases.TC001_MYQC_Pre_Login_Test">
+                <test-method status="PASS"
+                             signature="before(java.lang.reflect.Method)[pri:0, instance:com.mmhayes.test_cases.TC001_MYQC_Pre_Login_Test@7c30a502]"
+                             name="before" is-config="true" duration-ms="17" started-at="2022-04-22T10:30:46Z"
+                             finished-at="2022-04-22T10:30:46Z">
+                    <params>
+                        <param index="0">
+                            <value>
+                                <![CDATA[public static void com.mmhayes.test_cases.TC001_MYQC_Pre_Login_Test.pre_Login_Test() throws java.io.IOException,java.lang.InterruptedException]]>
+                            </value>
+                        </param>
+                    </params>
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- before -->
+                <test-method status="PASS"
+                             signature="pre_Login_Test()[pri:0, instance:com.mmhayes.test_cases.TC001_MYQC_Pre_Login_Test@7c30a502]"
+                             name="pre_Login_Test" duration-ms="11968" started-at="2022-04-22T10:30:46Z"
+                             finished-at="2022-04-22T10:30:58Z">
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- pre_Login_Test -->
+                <test-method status="PASS"
+                             signature="endTest()[pri:0, instance:com.mmhayes.test_cases.TC001_MYQC_Pre_Login_Test@7c30a502]"
+                             name="endTest" is-config="true" duration-ms="1" started-at="2022-04-22T10:30:58Z"
+                             finished-at="2022-04-22T10:30:58Z">
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- endTest -->
+            </class> <!-- com.mmhayes.test_cases.TC001_MYQC_Pre_Login_Test -->
+            <class name="com.mmhayes.test_cases.TC005_PointDonation_Test">
+                <test-method status="PASS"
+                             signature="before(java.lang.reflect.Method)[pri:0, instance:com.mmhayes.test_cases.TC005_PointDonation_Test@58ceff1]"
+                             name="before" is-config="true" duration-ms="5" started-at="2022-04-22T10:31:07Z"
+                             finished-at="2022-04-22T10:31:07Z">
+                    <params>
+                        <param index="0">
+                            <value>
+                                <![CDATA[public static void com.mmhayes.test_cases.TC005_PointDonation_Test.pointDonationTest() throws java.io.IOException,java.lang.InterruptedException]]>
+                            </value>
+                        </param>
+                    </params>
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- before -->
+                <test-method status="PASS"
+                             signature="pointDonationTest()[pri:0, instance:com.mmhayes.test_cases.TC005_PointDonation_Test@58ceff1]"
+                             name="pointDonationTest" duration-ms="1600" started-at="2022-04-22T10:31:07Z"
+                             finished-at="2022-04-22T10:31:09Z">
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- pointDonationTest -->
+                <test-method status="PASS"
+                             signature="endTest()[pri:0, instance:com.mmhayes.test_cases.TC005_PointDonation_Test@58ceff1]"
+                             name="endTest" is-config="true" duration-ms="0" started-at="2022-04-22T10:31:09Z"
+                             finished-at="2022-04-22T10:31:09Z">
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- endTest -->
+            </class> <!-- com.mmhayes.test_cases.TC005_PointDonation_Test -->
+            <class name="com.mmhayes.test_cases.TC002_Login_Prepaid_Test">
+                <test-method status="PASS"
+                             signature="openBrowser()[pri:0, instance:com.mmhayes.test_cases.TC002_Login_Prepaid_Test@1134affc]"
+                             name="openBrowser" is-config="true" duration-ms="2001" started-at="2022-04-22T10:30:44Z"
+                             finished-at="2022-04-22T10:30:46Z">
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- openBrowser -->
+                <test-method status="PASS"
+                             signature="before(java.lang.reflect.Method)[pri:0, instance:com.mmhayes.test_cases.TC002_Login_Prepaid_Test@1134affc]"
+                             name="before" is-config="true" duration-ms="7" started-at="2022-04-22T10:30:58Z"
+                             finished-at="2022-04-22T10:30:58Z">
+                    <params>
+                        <param index="0">
+                            <value>
+                                <![CDATA[public static void com.mmhayes.test_cases.TC002_Login_Prepaid_Test.login_Test() throws java.io.IOException,java.lang.InterruptedException]]>
+                            </value>
+                        </param>
+                    </params>
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- before -->
+                <test-method status="PASS"
+                             signature="login_Test()[pri:0, instance:com.mmhayes.test_cases.TC002_Login_Prepaid_Test@1134affc]"
+                             name="login_Test" duration-ms="3421" started-at="2022-04-22T10:30:58Z"
+                             finished-at="2022-04-22T10:31:02Z">
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- login_Test -->
+                <test-method status="PASS"
+                             signature="endTest()[pri:0, instance:com.mmhayes.test_cases.TC002_Login_Prepaid_Test@1134affc]"
+                             name="endTest" is-config="true" duration-ms="1" started-at="2022-04-22T10:31:02Z"
+                             finished-at="2022-04-22T10:31:02Z">
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- endTest -->
+                <test-method status="PASS"
+                             signature="closeBrowser()[pri:0, instance:com.mmhayes.test_cases.TC002_Login_Prepaid_Test@1134affc]"
+                             name="closeBrowser" is-config="true" duration-ms="991" started-at="2022-04-22T10:31:09Z"
+                             finished-at="2022-04-22T10:31:10Z">
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- closeBrowser -->
+            </class> <!-- com.mmhayes.test_cases.TC002_Login_Prepaid_Test -->
+            <class name="com.mmhayes.test_cases.TC003_Online_Ordering_Page_Test">
+                <test-method status="PASS"
+                             signature="before(java.lang.reflect.Method)[pri:0, instance:com.mmhayes.test_cases.TC003_Online_Ordering_Page_Test@48140564]"
+                             name="before" is-config="true" duration-ms="5" started-at="2022-04-22T10:31:02Z"
+                             finished-at="2022-04-22T10:31:02Z">
+                    <params>
+                        <param index="0">
+                            <value>
+                                <![CDATA[public static void com.mmhayes.test_cases.TC003_Online_Ordering_Page_Test.online_Ordering_Page_Test() throws java.io.IOException,java.lang.InterruptedException]]>
+                            </value>
+                        </param>
+                    </params>
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- before -->
+                <test-method status="PASS"
+                             signature="online_Ordering_Page_Test()[pri:0, instance:com.mmhayes.test_cases.TC003_Online_Ordering_Page_Test@48140564]"
+                             name="online_Ordering_Page_Test" duration-ms="5408" started-at="2022-04-22T10:31:02Z"
+                             finished-at="2022-04-22T10:31:07Z">
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- online_Ordering_Page_Test -->
+                <test-method status="PASS"
+                             signature="endTest()[pri:0, instance:com.mmhayes.test_cases.TC003_Online_Ordering_Page_Test@48140564]"
+                             name="endTest" is-config="true" duration-ms="1" started-at="2022-04-22T10:31:07Z"
+                             finished-at="2022-04-22T10:31:07Z">
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- endTest -->
+            </class> <!-- com.mmhayes.test_cases.TC003_Online_Ordering_Page_Test -->
+        </test> <!-- C:/Users/fhasan/eclipse-workspace/MYQC_Browser_Regression -->
+    </suite> <!-- All Test Suite -->
+</testng-results>

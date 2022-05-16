@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" parallel="none">
+    <test name="Test(failed)" parallel="none">
+        <classes>
+            <class name="com.mmhayes.test_cases.TC005_PointDonation_Test">
+                <methods>
+                    <include name="closeBrowser"/>
+                    <include name="before"/>
+                    <include name="pointDonationTest"/>
+                    <include name="endTest"/>
+                    <include name="openBrowser"/>
+                </methods>
+            </class> <!-- com.mmhayes.test_cases.TC005_PointDonation_Test -->
+            <class name="com.mmhayes.test_cases.TC001_MYQC_Pre_Login_Test">
+                <methods>
+                    <include name="before"/>
+                    <include name="endTest"/>
+                </methods>
+            </class> <!-- com.mmhayes.test_cases.TC001_MYQC_Pre_Login_Test -->
+            <class name="com.mmhayes.test_cases.TC002_Login_Prepaid_Test">
+                <methods>
+                    <include name="before"/>
+                    <include name="endTest"/>
+                </methods>
+            </class> <!-- com.mmhayes.test_cases.TC002_Login_Prepaid_Test -->
+        </classes>
+    </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
