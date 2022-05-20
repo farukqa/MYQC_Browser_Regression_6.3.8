@@ -49,6 +49,7 @@ public class TC002_Login_Prepaid_Test extends Setup_Methods {
             String actual = home_page().getTextOnlineOrderingButton();
             Assert.assertEquals(actual, expected);
             prln("Homepage load is complete to start testing\n=======");
+            Thread.sleep(2000);
 
             //https://www.toolsqa.com/selenium-webdriver/excel-in-selenium/
         }

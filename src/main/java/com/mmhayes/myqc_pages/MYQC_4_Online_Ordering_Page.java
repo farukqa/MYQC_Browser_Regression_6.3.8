@@ -22,6 +22,10 @@ public class MYQC_4_Online_Ordering_Page extends Setup_Methods {
     // Store Selection button
     @FindBy(how = How.XPATH, using = "//*[@id=\"stores-available\"]/li[1]/div[1]/h2")
     public static WebElement cafe;
+    //restricted cafe store selection
+    //*[@id="stores-available"]/li[5]/div[2]/img
+    @FindBy(how =How.XPATH,using="//*[@id=\"stores-available\"]/li[5]/div[2]/img")
+    public static WebElement cafeRestricted;
 
     @FindBy(how = How.XPATH, using = "//*[@id=\"order-header\"]/a[1]")
     public static WebElement home;
@@ -29,6 +33,11 @@ public class MYQC_4_Online_Ordering_Page extends Setup_Methods {
     //clicking the Cafeteria button
     public MYQC_4_Online_Ordering_Page clickOnCafe() throws IOException, InterruptedException {
         All_Reusable_Methods.click(driver, cafe, 0, logger, "Cafeteria");
+        return new MYQC_4_Online_Ordering_Page(driver);
+    }
+    //clicking the restricted cafeteria button
+    public MYQC_4_Online_Ordering_Page clickOnRestrictedCafe() throws IOException, InterruptedException {
+        All_Reusable_Methods.click(driver, cafeRestricted, 0, logger, "Restricted Cafeteria");
         return new MYQC_4_Online_Ordering_Page(driver);
     }
 

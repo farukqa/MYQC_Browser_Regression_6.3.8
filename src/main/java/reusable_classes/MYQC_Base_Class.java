@@ -38,8 +38,7 @@ public class MYQC_Base_Class extends Setup_Methods {
     }
 
     public static MYQC_5_Rewards_Page reward_page() {
-        MYQC_5_Rewards_Page rewards_page = new MYQC_5_Rewards_Page(driver);
-        return rewards_page;
+        return new MYQC_5_Rewards_Page(driver);
     }
 
     public static MYQC_5_1_Point_Donation_Page point_donation_page() {
@@ -50,6 +49,16 @@ public class MYQC_Base_Class extends Setup_Methods {
     public static MYQC_6_Current_Balance_Page currentBalancePage() {
         MYQC_6_Current_Balance_Page currentBalancePage = new MYQC_6_Current_Balance_Page(driver);
         return currentBalancePage;
+    }
+
+    public static MYQC_4_2_Restricted_Cafe_Page restrictedCafePage(){
+        MYQC_4_2_Restricted_Cafe_Page restrictedCafePage = new MYQC_4_2_Restricted_Cafe_Page(driver);
+        return restrictedCafePage;
+    }
+
+    public static MYQC_4_3_AddOrderPage addOrderPage(){
+        MYQC_4_3_AddOrderPage addOrderPage = new MYQC_4_3_AddOrderPage(driver);
+        return addOrderPage;
     }
 
 }

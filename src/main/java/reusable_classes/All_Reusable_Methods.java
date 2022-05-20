@@ -1,19 +1,31 @@
 package reusable_classes;
 
+import com.mmhayes.myqc_pages.MYQC_1_Pre_Login_Page;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import org.apache.commons.io.FileUtils;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+
+import static reusable_classes.MYQC_Base_Class.home_page;
+import static reusable_classes.MYQC_Base_Class.login_page;
+import static reusable_classes.Setup_Methods.driver;
 
 public class All_Reusable_Methods {
 
@@ -64,6 +76,8 @@ public class All_Reusable_Methods {
             System.out.println("Unable to click on element " + elementName + " --" + err);
             loggers.log(LogStatus.FAIL, "Unable to click on element " + elementName + " --" + err);
             getScreenshot(driver, loggers, elementName);
+
+
         }
     }//end of click method
 
@@ -130,6 +144,7 @@ public class All_Reusable_Methods {
             System.out.println("Unable to select value from element " + elementName + " --" + err);
             loggers.log(LogStatus.FAIL, "Unable to select value from element " + elementName + " --" + err);
             getScreenshot(driver, loggers, elementName);
+
         }
     }//end of Select by text method
 
@@ -151,6 +166,42 @@ public class All_Reusable_Methods {
         calendar.add(Calendar.DAY_OF_MONTH, days);
         String date1 = dateFormat.format(calendar.getTime());
         return date1;
+    }
+
+    //common code to call when a test case fails
+
+    public static void returnsToHome() throws IOException, InterruptedException {
+        Thread.sleep(2000);
+        driver.navigate().refresh();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//*[@id=\"logoutMyQCLink\"]")).click();
+        Thread.sleep(2000);
+        //Create an object of the File class to open xlsx file
+        File file = new File("C:\\Users\\fhasan\\Desktop\\idPass.xlsx");
+        // Create an object of FileInputStream class to read Excel file
+        FileInputStream inputStream = new FileInputStream(file);
+        //Create a workbook instance that refers to .xlsx file
+        XSSFWorkbook wb = new XSSFWorkbook(inputStream);
+        XSSFSheet sheet = wb.getSheet("Sheet1");
+        for (int i = 1; i < 2; i++) {
+            //Create a row object to retrieve row at index 1
+            XSSFRow row1 = sheet.getRow(i);
+            //Create a cell object to retreive cell at index 1
+            XSSFCell cell = row1.getCell(0);
+            XSSFCell cell1 = row1.getCell(1);
+            //Get the id and pass in variables
+            String username = cell.getStringCellValue();
+            String password = cell1.getStringCellValue();
+            login_page().clickOnUsername();
+            login_page().sendUsername(username);
+            login_page().clickOnpassword();
+            login_page().sendPassword(password);
+            login_page().clickOnLogin();
+            String expected = "Online Ordering";
+            String actual = home_page().getTextOnlineOrderingButton();
+            Assert.assertEquals(actual, expected);
+            prln("Homepage load is complete to start testing\n=======");
+        }
     }
 
     public static void prln(Object object) {
